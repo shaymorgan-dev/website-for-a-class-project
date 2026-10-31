@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Об игре — Assassin's Creed Black Flag Resynced</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/logo_site.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #0a1a2f;
+            color: #8aa0b3;
+            scroll-padding-top: 110px; 
+        }
+
+        .about-game-section {
+            padding: 140px 0 80px;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .about-game-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #00d9ff, #ffd700);
+            z-index: 2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 3;
+        }
+
+        h2 {
+            font-size: 2.4rem;
+            color: #00d9ff;
+            text-align: left;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+        }
+
+        /* Бонус за предзаказ */
+        .preorder-bonus {
+            background-color: rgba(255, 215, 0, 0.1);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Слоган */
+        .tagline {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .tagline h3 {
+            font-size: 1.8rem;
+            color: #00d9ff;
+            text-transform: uppercase;
+            text-align: left;
+            letter-spacing: 1px;
+            margin: 0;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(60, 168, 240, 0.4);
+        }
+
+        /* Основной контент */
+        .game-content p,
+        .game-content h3,
+        .game-content h4 {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .game-content h3 {
+            font-size: 1.5rem;
+            color: #00d9ff;
+            font-weight: 600;
+        }
+
+        .game-content p {
+            color: #ddd;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+
+        /* Контент для взрослых */
+        .content-warning {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .content-warning h4 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .content-warning p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .system-requirements {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .system-requirements h4 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .requirements-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+        }
+
+        .req-column {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .req-column p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.6;
+            margin: 0 0 10px;
+        }
+
+        .read-more-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 28px;
+            background: linear-gradient(90deg, #00d9ff, #0099cc);
+            color: #0a1a2f;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Geologica', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+        }
+
+        .read-more-btn:hover {
+            background: linear-gradient(90deg, #00ffff, #00d9ff);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 217, 255, 0.6);
+        }
+
+        .read-more-btn.collapsed {
+            background: #3cbdf0; /* Цвет для скрытого состояния */
+            color: #fff;
+            box-shadow: 0 6px 15px rgba(6, 182, 252, 0.5);
+        }
+
+        /* Скрытый контент */
+        .game-content > .hidden-content {
+            display: none;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Assassin's Creed Black Flag Resynced</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="edition.html">ИЗДАНИЯ</a></li>
+                    <li><a href="news.html">НОВОСТИ</a></li>
+                    <li><a href="index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="requirements.html" class="active">ХАРАКТЕРИСТИКИ ПК</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Game Section -->
+    <section class="about-game-section">
+        <div class="container">
+            <h2>Об игре</h2>
+
+            <!-- Бонус за предзаказ -->
+            <div class="preorder-bonus">
+                <p>
+                    <strong>Сделайте предварительную покупку сейчас</strong> и получите эксклюзивный бонус
+                    <span class="highlight">Алый набор Черной Бороды</span>. Включает уникальный наряд для Эдварда Кенуэя, 
+                    особый клинок и пистолет.
+                </p>
+            </div>
+
+            <!-- Заголовок-слоган -->
+            <div class="tagline">
+                <h3>СТАНЬТЕ ГРОЗОЙ МОРЕЙ</h3>
+            </div>
+
+            <div class="game-content">
+                <p>
+                    Вселяйте страх в сердца врагов, топите их суда или берите их на абордаж в роли капитана «Галки» – Эдварда Кенуэя. Смешивайтесь с толпой и возглавляйте дерзкие рейды, переключайтесь между бесшумными устранениями и яростными схватками, с легкостью орудуя кортиками, пистолетами и скрытым клинком. В окружении легендарных исторических персонажей – известных пиратов – бросайте вызов империям посреди векового противостояния ассасинов и тамплиеров.
+                </p>
+                <video src="video/game.webm" autoplay loop muted playsinline></video>
+                <button class="read-more-btn collapsed" id="stickyReadMoreBtn">Читать дальше</button>
+                <h3>Улучшенная версия любимой классики</h3>
+                <p>
+                    Сражения стали более динамичными – теперь главную роль играют парирования и устранения; скрытность и паркур были улучшены, в частности, стало проще сбегать от противников и совершать быстрые убийства. Для «Галки» доступно множество улучшений, которые помогут выстоять в битве с могучими вражескими кораблями; улучшенная система морского боя включает альтернативные режимы стрельбы. В ремейке также имеются общие улучшения игрового процесса, исправляющие отмеченные игроками недостатки оригинальной версии.
+                </p>
+                <video src="video/game1.webm" autoplay loop muted playsinline></video>
+                <p>
+                    Этот ремейк исправляет замеченные игроками недостатки оригинала и предлагает оптимизированный геймплей - 
+                    чёткий, отзывчивый и зрелищный.
+                </p>
+
+                <h3>Карибское море, какого ещё не было</h3>
+                <p>
+                    Вас ждет открытый мир без загрузок: водные пространства и дикие земли, созданные при помощи новейшего движка Anvil. Рассматривайте раскинувшиеся перед вами виды, пересекайте бушующие моря, ныряйте к затонувшим кораблям, пробирайтесь сквозь тропические джунгли. Погрузитесь в историю по-настоящему: мир игры оживает в каждой сцене, улучшенной при помощи технологии <strong>Dolby Atmos</strong> и трассировки лучей.
+                </p>
+                <video src="video/game2.webm" autoplay loop muted playsinline></video>
+
+                <h3>Новые приключения Эдварда</h3>
+                <p>
+                    Assassin's Creed Black Flag Resynced представляет вашему вниманию новый эксклюзивный контент, развивающий историю оригинала. Знакомые персонажи вернутся, а у любимых героев (например, у Черной Бороды и Стида Боннета) появятся новые сюжетные линии. На пути вам также встретятся неожиданные союзники: по ходу развития основного сюжета к вам присоединятся три новых офицера. Вас ждут и другие сюрпризы: новые матросские песни-шанти, питомцы, фоторежим – и это еще не все.
+                </p>
+                <p>
+                    Также в игре: новые матросские песни-шанти, питомцы, фоторежим и другие приятные дополнения, 
+                    делающие приключение ещё глубже.
+                </p>
+                <video src="video/game3.webm" autoplay loop muted playsinline></video>
+
+                <!-- Контент для взрослых -->
+                <div class="content-warning">
+                    <h4>Описание контента для взрослых:</h4>
+                    <p>Насилие, кровь, сексуальные темы, ненормативная лексика, употребление алкоголя.</p>
+                </div>
+            </div>  
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <small>© 2026 Assassin's Creed Black Flag Resynced | Все права защищены</small>
+        </div>
+    </footer>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const readMoreBtn = document.querySelector('.read-more-btn');
+    
+    if (readMoreBtn) {
+        // Находим кнопку и ищем всё, что идёт ПОСЛЕ неё
+        const siblings = Array.from(readMoreBtn.parentNode.children);
+        const btnIndex = siblings.indexOf(readMoreBtn);
+
+        // Собираем все элементы после кнопки в массив
+        let hiddenElements = [];
+        for (let i = btnIndex + 1; i < siblings.length; i++) {
+            const el = siblings[i];
+            // Пропускаем пустые текстовые узлы и саму кнопку
+            if (el.nodeType === Node.ELEMENT_NODE && el !== readMoreBtn) {
+                hiddenElements.push(el);
+                el.classList.add('hidden-content');
+            }
+        }
+
+        readMoreBtn.classList.add('collapsed');
+
+        // Обработчик клика
+        readMoreBtn.addEventListener('click', () => {
+            // Если кнопка "collapsed" → показываем
+            if (readMoreBtn.classList.contains('collapsed')) {
+                hiddenElements.forEach(el => el.classList.remove('hidden-content'));
+                readMoreBtn.textContent = 'Свернуть';
+                readMoreBtn.classList.remove('collapsed');
+                readMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                // Иначе → скрываем
+                hiddenElements.forEach(el => el.classList.add('hidden-content'));
+                readMoreBtn.textContent = 'Читать дальше';
+                readMoreBtn.classList.add('collapsed');
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

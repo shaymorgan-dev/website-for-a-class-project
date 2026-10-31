@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassin's Creed Black Flag Resynced</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/logo_site.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- 1. ШАПКА САЙТА -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Предзаказ Assassin's Creed Black Flag Resynced</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="edition.html">ИЗДАНИЯ</a></li>
+                    <li><a href="news.html">НОВОСТИ</a></li>
+                    <li><a href="about.html">ОБ ИГРЕ</a></li>
+                    <li><a href="requirements.html">ХАРАКТЕРИСТИКИ ПК</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Логотип в углу -->
+        <div class="logo_home">
+            <img src="media/logo_home.webp" alt="Логотип игры">
+        </div>
+    </header>
+
+    <!-- 2. ГЛАВНЫЙ БЛОК (Hero Section) -->
+    <section id="home" class="hero-section">
+        <!-- Фоновое видео -->
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="video/video_logo.mp4" type="video/mp4">
+            </video>
+            <!-- Текст поверх видео -->
+            <h2>Assassin's Creed Black Flag</h2>
+            <h3>Resynced</h3>
+            <h4>- Стандартное издание</h4>
+            <h5>Дата выхода: 9 июля 2026 года</h5>
+            <p>Издание</p>
+            <a href="edition.html" class="btn btn-primary">Ознакомиться с изданиями</a>
+        </div>
+
+        <!-- Информационный уголок -->
+        <div class="corner-square">
+            <span class="text-page">Насилие, кровь, сексуальные темы, ненормативная лексика, употребление алкоголя</span>
+            <span class="text-page2">Взаимодействие с пользователями, внутриигровые покупки</span>
+        </div>
+
+        <!-- Кнопка предзаказа -->
+        <button class="main-cta">Сделать предзаказ</button>
+
+        <!-- Варианты цен -->
+        <div class="price-options">
+            <label class="price-option2">
+                <input type="radio" name="price" value="69.99" required>
+                <span>Делюкс-издание — $69.99</span>
+            </label>
+            <label class="price-option">
+                <input type="radio" name="price" value="59.99" required>
+                <span>Стандартное издание — $59.99</span>
+            </label>
+            <label class="price-option1">
+                <input type="radio" name="price" value="17.99">
+                <span>По подписке — $17.99/месяц</span>
+            </label>
+        </div>
+    </section>
+
+    <!-- 5. ТРЕЙЛЕР И АУДИО -->
+    <section class="video-showcase-section">
+        <div class="video-showcase-background"></div>
+        <div class="video-content-wrapper">
+            <!-- Видео с текстом поверх -->
+            <div class="video-player-container">
+                <video controls>
+                    <source src="video/video_logo.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <h2>Трейлер мировой премьеры</h2>
+                    <p>Новый взгляд на легендарное приключение с улучшенной графикой, звуком и геймплеем</p>
+                </div>
+            </div>
+
+            <!-- Аудио: матросская песня -->
+            <div class="audio-section">
+                <h3>Насладитесь вновь этой легендарной матросской песней "Leave her Johnny"</h3>
+                <audio controls class="audio-player">
+                    <source src="audio/shanty.mp3" type="audio/mpeg">
+                </audio>
+                <p class="audio-description">
+                    Эпическая переработка классической матросской песни в исполнении оркестра и хора.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ЛЕНТА ИЗОБРАЖЕНИЙ -->
+    <section class="image-tape">
+        <button class="tape-btn prev-btn">&lt;</button>
+        <div class="tape-container">
+            <!-- Прогресс-бар прокрутки -->
+            <div class="scroll-indicator">
+                <div class="progress-bar"></div>
+            </div>
+            <!-- Изображения -->
+            <img src="media/photo1.png" alt="Сцена из игры 1">
+            <img src="media/photo2.png" alt="Сцена из игры 2">
+            <img src="media/photo3.png" alt="Сцена из игры 3">
+            <img src="media/photo4.png" alt="Сцена из игры 4">
+            <img src="media/photo5.png" alt="Сцена из игры 5">
+            <img src="media/photo6.png" alt="Сцена из игры 6">
+            <img src="media/photo7.png" alt="Сцена из игры 7">
+            <!-- Дубли для плавного цикла -->
+            <img src="media/photo1.png" alt="Сцена из игры 1">
+            <img src="media/photo2.png" alt="Сцена из игры 2">
+            <img src="media/photo3.png" alt="Сцена из игры 3">
+            <img src="media/photo4.png" alt="Сцена из игры 4">
+            <img src="media/photo5.png" alt="Сцена из игры 5">
+            <img src="media/photo6.png" alt="Сцена из игры 6">
+            <img src="media/photo7.png" alt="Сцена из игры 7">
+        </div>
+
+        <!-- Модальное окно для увеличения -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+        <button class="tape-btn next-btn">&gt;</button>
+    </section>
+
+    <!-- 4. ОБЩАЯ ИНФОРМАЦИЯ -->
+    <section id="about" class="about-section">
+        <div class="information">
+            <h2>Общая информация</h2>
+            <div class="gray-square">
+                <h3>
+                    Легендарное одиночное пиратское приключение возвращается. Отправляйтесь в плавание по Карибскому морю в роли
+                    Эдварда Кенуэя в эпоху расцвета пиратства в этом улучшенном ремейке с потрясающей графикой, обновлённым
+                    геймплеем и новым контентом.
+                </h3>
+                <p><strong>Дата выхода:</strong> <span>9 июля 2026 года</span></p>
+
+                <div class="info-row">
+                    <div class="label-group">
+                        <h4>Платформа:</h4>
+                        <h4>Жанр:</h4>
+                    </div>
+                    <div class="tags-group">
+                        <div class="tag-list">
+                            <span class="tag"><span class="tag-emoji">🖥️</span> Ubisoft Connect PC</span>
+                            <span class="tag"><span class="tag-emoji">🎮</span> PS5</span>
+                            <span class="tag"><span class="tag-emoji">⬜</span> Xbox</span>
+                            <span class="tag"><span class="tag-emoji">🟦</span> Steam</span>
+                        </div>
+                        <div class="tag-list">
+                            <span class="tag"><span class="tag-emoji">⚔️</span> Экшен</span>
+                            <span class="tag"><span class="tag-emoji">⛵</span> Приключения</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Карта Нассау в пиратском стиле -->
+<section class="pirate-map-section">
+    <div class="container">
+        <h2>Пиратская республика</h2>
+        <p class="map-description">
+            Для тех у кого дух пиратства в крови и ему нетерпиться увидеть знаменитый остров вживую, предлагаем отправиться в путишествие в Нассау.<br>
+            Расположенный на острове Нью-Провиденс, Нассау был настоящей <strong>столицей пиратов</strong> в начале XVIII века. 
+            Здесь собирались легендарные пираты того времени - Черная Борода, Чарльз Вэн, «Калико» Джек Рэкхэм -
+            чтобы разделить добычу, отдохнуть и спланировать новые рейды.
+        </p>
+
+        <div class="map-wrapper">
+            <div class="map-frame">
+                <div class="map-header">
+                    <span>🗺️ <strong>Нассау, Багамские Острова</strong></span>
+                </div>
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?ll=-77.231996%2C25.045763&mode=poi&poi%5Bpoint%5D=-77.324142%2C25.047194&poi%5Buri%5D=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjM5OTE1OTY1Eg9CYWhhbWFzLCBOYXNzYXUiCg2ipZrCFeNfyEE%2C&z=10.63" 
+                    width="100%" 
+                    height="400" 
+                    frameborder="0" 
+                    allowfullscreen="true"
+                    title="Интерактивная карта Нассау">
+                </iframe>
+            </div>
+            <p class="map-attribution">
+                <a href="https://yandex.ru/maps/geo/nassau/2239915965/?ll=-77.231996%2C25.045763&utm_medium=mapframe&utm_source=maps" target="_blank" class="map-link">Яндекс карты</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+    <!-- 6. ПОДВАЛ -->
+    <footer class="footer">
+        <div class="container">
+            <small>
+                Сайт вдохновлённый выходом ремейка легендарной игры моего детства и серии Assassin's Creed.<br>
+                При финансовой поддержке было бы гораздо легче. При бездействии совета директоров Ubisoft Entertainment....<br>
+                А также моей лени.<br>
+                © 2026 Assassin's Creed Black Flag Resynced | Все права защищены (Дай Бог)
+            </small>
+        </div>
+    </footer>
+
+    <!-- 7. JAVASCRIPT -->
+    <!-- Скрипт: изменение текста кнопки в зависимости от выбора -->
+    <script>
+        const button = document.querySelector('.main-cta');
+        const radioStandard = document.querySelector('input[value="59.99"]');
+        const radioDeluxe = document.querySelector('input[value="69.99"]');
+        const radioSubscription = document.querySelector('input[value="17.99"]');
+
+        function updateButtonText() {
+            if (radioSubscription.checked) {
+                button.textContent = 'Подписаться';
+            } else {
+                button.textContent = 'Сделать предзаказ';
+            }
+        }
+
+        // Назначаем обработчики
+        [radioStandard, radioDeluxe, radioSubscription].forEach(radio => {
+            if (radio) radio.addEventListener('change', updateButtonText);
+        });
+
+        // Обновляем при загрузке
+        window.addEventListener('load', updateButtonText);
+    </script>
+
+    <!-- Скрипт: автопрокрутка ленты изображений -->
+    <script>
+        const container = document.querySelector('.tape-container');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const dotsContainer = document.querySelector('.scroll-indicator');
+
+        const scrollAmount = 320;
+        const autoScrollDelay = 5000;
+        let autoScroll;
+
+        const startAutoScroll = () => {
+            autoScroll = setInterval(() => {
+                if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            }, autoScrollDelay);
+        };
+
+        const stopAutoScroll = () => {
+            if (autoScroll) clearInterval(autoScroll);
+        };
+
+        startAutoScroll();
+        container.addEventListener('mouseenter', stopAutoScroll);
+        container.addEventListener('mouseleave', startAutoScroll);
+
+        nextBtn.addEventListener('click', () => {
+            container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        // Кнопка "Назад" активна только при прокрутке
+        container.addEventListener('scroll', () => {
+            prevBtn.disabled = container.scrollLeft === 0;
+            prevBtn.style.opacity = container.scrollLeft === 0 ? 0.5 : 1;
+            prevBtn.style.cursor = container.scrollLeft === 0 ? 'not-allowed' : 'pointer';
+        });
+    </script>
+
+    <!-- Скрипт: индикатор прокрутки -->
+    <script>
+        const totalImages = document.querySelectorAll('.tape-container img').length;
+        const visibleImages = 3;
+
+        for (let i = 0; i <= totalImages - visibleImages; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        const updateDots = () => {
+            const index = Math.round(container.scrollLeft / 320);
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        };
+
+        container.addEventListener('scroll', updateDots);
+        window.addEventListener('load', updateDots);
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- 1. Поиск элементов DOM ---
+    const modal = document.getElementById('imageModal');         // Модальное окно
+    const modalImage = document.getElementById('modalImage');    // Большое изображение
+    const closeButton = document.querySelector('.close');        // Кнопка закрытия (крестик)
+    const thumbnailImages = document.querySelectorAll('.tape-container img'); // Миниатюры
+
+    // --- 2. Проверка наличия элементов ---
+    if (!modal || !modalImage || !closeButton) {
+        console.warn('Один или несколько элементов модального окна не найдены. Пропуск инициализации.');
+        return;
+    }
+
+    // --- 3. Инициализация: скрываем окно при загрузке ---
+    modal.style.display = 'none'; // Гарантированно скрыто
+
+    // --- 4. Открытие модального окна ---
+    thumbnailImages.forEach(img => {
+        img.addEventListener('click', event => {
+            event.preventDefault(); // Предотвращаем действия по умолчанию
+
+            // Показываем модальное окно
+            modal.style.display = 'flex';
+
+            // Подставляем путь и описание из миниатюры
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+
+            // Блокируем скролл страницы
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // --- 5. Закрытие по клику на крестик ---
+    closeButton.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Возвращаем скролл
+    });
+
+    // --- 6. Закрытие по клику на затемнённый фон ---
+    modal.addEventListener('click', event => {
+        if (event.target === modal) { // Клик именно по фону, а не по изображению
+            modal.style.display = 'none';
+            document.body.style.overflow = ''; // Возвращаем скролл
+        }
+    });
+});
+    </script>
+</body>
+</html>

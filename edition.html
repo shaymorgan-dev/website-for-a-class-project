@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Издания — Assassin's Creed Black Flag Resynced</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <link rel="icon" href="media/logo_site.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #0a1a2f;
+            color: #8aa0b3;
+        }
+
+        .edition-section {
+            padding: 140px 0 80px; 
+            min-height: 100vh;
+        }
+
+        body {
+            scroll-padding-top: 110px;
+        }
+
+        .edition-section h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.4rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: #1e2a3a;
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 
+                0 8px 20px rgba(0, 0, 0, 0.6),
+                0 0 15px rgba(0, 217, 255, 0.1) inset;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 
+                0 12px 25px rgba(0, 0, 0, 0.7),
+                0 0 20px rgba(0, 217, 255, 0.3);
+            border-color: #00d9ff;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(0, 217, 255, 0.2);
+        }
+
+        .card h3 {
+            text-align: center;
+            color: white;
+            margin: 15px 0;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            color: #ccc;
+            padding: 0 20px 15px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .card-btn {
+            display: block;
+            width: calc(100% - 40px);
+            margin: 10px 20px 20px;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Geologica', sans-serif;
+        }
+
+        .card-btn.primary {
+            background-color: #00d9ff;
+            color: #0a1a2f;
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+        }
+
+        .card-btn.primary:hover {
+            background-color: #00ffff;
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+        }
+
+        .card-btn.secondary {
+            background-color: #ffd700;
+            color: #0a1a2f;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .card-btn.secondary:hover {
+            background-color: #ffe040;
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Assassin's Creed Black Flag Resynced</h1>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="news.html">НОВОСТИ</a></li>
+                    <li><a href="about.html">ОБ ИГРЕ</a></li>
+                    <li><a href="requirements.html" class="active">ХАРАКТЕРИСТИКИ ПК</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Edition Section -->
+    <section class="edition-section">
+        <div class="container">
+            <h2>Сравните издания Assassin's Creed Black Flag Resynced</h2>
+            <div class="grid-container">
+                <!-- Карточка 1: Стандартное издание -->
+                <div class="card">
+                    <img src="media/standart_edition.webp" alt="Стандартное издание">
+                    <h3>Стандартное издание</h3>
+                    <p>
+                        > Базовая игра<br>
+                        > Бонус за предзаказ
+                    </p>
+                    <button class="card-btn primary">Предзаказ</button>
+                </div>
+
+                <!-- Карточка 2: Делюкс-издание -->
+                <div class="card">
+                    <img src="media/deluxe_edition.jpg" alt="Делюкс-издание">
+                    <h3>Делюкс-издание</h3>
+                    <p>
+                        > Базовая игра<br>
+                        > Набор персонажей Master Assassin<br>
+                        > Набор кораблей Master Assassin<br>
+                        > Бонус за предзаказ
+                    </p>
+                    <button class="card-btn primary">Предзаказ</button>
+                </div>
+
+                <!-- Карточка 3: По подписке -->
+                <div class="card">
+                    <img src="media/podpiska.png" alt="Подписка">
+                    <h3>Делюкс-издание по подписке</h3>
+                    <p>
+                        > Базовая игра<br>
+                        > Набор персонажей Master Assassin<br>
+                        > Набор кораблей Master Assassin<br>
+                        > Бонус за предзаказ<br>
+                        > Более 145 игр, включая новинки
+                    </p>
+                    <button class="card-btn secondary">Присоединиться сейчас</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <small>© 2026 Assassin's Creed Black Flag Resynced | Все права защищены</small>
+        </div>
+    </footer>
+</body>
+</html>
